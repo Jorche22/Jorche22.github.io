@@ -1,290 +1,230 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV - Jorch22</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Jorch22</title>
 
-<!-- ===== FUENTES ===== -->
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap');
+    <style>
+        /* ===== ESTILOS GENERALES ===== */
+        body {
+            font-family: Helvetica, sans-serif;
+            background-color: #000000;
+            color: #fff8f8;
+            margin: 0;
+            padding: 0;
+        }
 
-body {
-    font-family: 'Helvetica', Arial, sans-serif;
-    background-color: #1a1a1a; /* fondo oscuro */
-    color: #e0e0e0; /* texto claro */
-    margin: 0;
-    padding: 0;
-}
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #353434;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
 
-/* ===== CONTENEDOR PRINCIPAL ===== */
-.container {
-    max-width: 900px;
-    margin: auto;
-    padding: 20px;
-}
+        h1, h2 {
+            color: #022ce9;
+        }
 
-/* ===== BOTONES ARRIBA ===== */
-.top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
+        h1 {
+            margin-bottom: 5px;
+        }
 
-.btn-lang {
-    padding: 6px 12px;
-    border: 1px solid #00d4ff;
-    border-radius: 4px;
-    cursor: pointer;
-    background-color: transparent;
-    color: #00d4ff;
-    font-weight: bold;
-    margin-left: 5px;
-}
+        p, li {
+            line-height: 1.5;
+        }
 
-.btn-lang.active {
-    background-color: #00d4ff;
-    color: #111;
-}
+        section {
+            margin-bottom: 25px;
+        }
 
-/* ===== BOTON DESCARGA ===== */
-.btn-download {
-    padding: 6px 12px;
-    border-radius: 4px;
-    border: none;
-    background-color: #00d4ff;
-    color: #111;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-}
+        ul {
+            padding-left: 20px;
+        }
 
-/* ===== SECCIONES ===== */
-section {
-    background-color: #2a2a2a;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-}
+        /* ===== BOTONES DE IDIOMA ===== */
+        .buttons {
+            text-align: right;
+            margin-bottom: 20px;
+        }
 
-h1 {
-    color: #00d4ff;
-    margin-bottom: 5px;
-}
+        .btn-lang {
+            padding: 6px 12px;
+            margin-left: 5px;
+            border: 1px solid #0077cc;
+            border-radius: 4px;
+            cursor: pointer;
+            background-color: white;
+            color: #0077cc;
+            font-weight: bold;
+        }
 
-h2 {
-    color: #00b0ff;
-    margin-bottom: 10px;
-}
+        .btn-lang.active {
+            background-color: #0077cc;
+            color: white;
+        }
 
-/* ===== BARRAS DE IDIOMA ===== */
-.language-bar {
-    display: flex;
-    margin-top: 5px;
-}
+        /* ===== CLASE OCULTA ===== */
+        .hidden {
+            display: none;
+        }
 
-.level {
-    flex: 1;
-    height: 12px;
-    margin-right: 2px;
-    background-color: #555;
-    border-radius: 2px;
-}
+        /* ===== PIE DE PÁGINA ===== */
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
 
-.level.active {
-    background-color: #00d4ff;
-}
+        a {
+            color: #0077cc;
+            text-decoration: none;
+        }
 
-/* ===== PIE DE PÁGINA ===== */
-footer {
-    text-align: center;
-    font-size: 0.9em;
-    color: #aaa;
-    margin-top: 30px;
-    border-top: 1px solid #333;
-    padding-top: 10px;
-}
+        a:hover {
+            text-decoration: underline;
+        }
 
-footer a {
-    color: #00d4ff;
-    text-decoration: none;
-    margin: 0 5px;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-</style>
-
-<!-- ===== ICONOS (Font Awesome) ===== -->
-<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    </style>
 </head>
 
 <body>
-<div class="container">
 
-    <!-- ===== BARRA SUPERIOR: DESCARGA Y IDIOMA ===== -->
-    <div class="top-bar">
-        <div>
-            <button class="btn-download" id="downloadBtn" onclick="downloadCV()">Descargar PDF</button>
-        </div>
-        <div>
+    <div class="container">
+
+        <!-- ===== BOTONES DE IDIOMA ===== -->
+        <div class="buttons">
             <button class="btn-lang active" onclick="showSpanish()">Español</button>
             <button class="btn-lang" onclick="showEnglish()">English</button>
         </div>
+
+        <!-- ===== CONTENIDO EN ESPAÑOL ===== -->
+        <div id="es">
+            <section id="presentacion">
+                <h1>Jorge Herrero Arjona</h1>
+                <p>Buenas a tod@s los que visiten mi currículum web, soy Jorge. Actualmente tengo 21 años (22/09/2004), tengo muchos hobbies, entre los cuales están los deportes (fútbol, baloncesto y F1 sobre todo); también me gusta mantener una vida sana y voy al gimnasio, pero sobre todo me gustan los videojuegos (por desgracia, uno de ellos es el LoL). Pero también me gusta la lectura en general (novelas (terror, policiacas, fantasía...), mangas y cómics) y mantenerme activo con nuevos conocimientos, por lo que aprender nuevas cosas para mí y estudiar no es ningún problema. Me considero una persona proactiva y con una capacidad de aprendizaje rápida. En el futuro me gustaría terminar trabajando en algo relacionado con administración de sistemas; el futuro lo dirá si lo logro.</p>
+            </section>
+
+            <section id="experiencia">
+                <h2>Experiencia Profesional</h2>
+                <ul>
+                    <li>TÉCNICO DE MANTENIMIENTO DE SISTEMAS DE SEGURIDAD – DEINTA SEGURIDAD SL (14/08/2025 - 05/12/2025) ZARAGOZA, ESPAÑA 
+                        Instalaciones y mantenimiento de sistemas de seguridad (Videovigilancia IP y Controles de Accesos). Puesta en marcha y configuración de cámaras de videovigilancia, en el taller y de forma remota (IP). Gestión y administración de documentos técnicos. Gestión de planos y dispositivos de forma centralizada en "Almand". Gestión de Incidencias de forma remota. Gestión y configuración de Servidores Windows. </li>
+                    <li>Mantenimiento y actualización de servidores Linux y Windows</li>
+                    <li>Gestión de usuarios, permisos y backups automatizados</li>
+                </ul>
+            </section>
+
+            <section id="estudios">
+                <h2>Formación Académica</h2>
+                <ul>
+                    <li>Técnico Superior en Administración de Sistemas Informáticos (2017-2019)</li>
+                    <li>Certificación CompTIA Network+ (2020)</li>
+                </ul>
+            </section>
+
+            <section id="idiomas">
+                <h2>Idiomas</h2>
+                <ul>
+                    <li>Español: Nativo</li>
+                    <li>Inglés: Intermedio</li>
+                </ul>
+            </section>
+
+            <section id="aptitudes">
+                <h2>Aptitudes y Conocimientos</h2>
+                <ul>
+                    <li>Administración de servidores Linux y Windows</li>
+                    <li>Redes TCP/IP, VPN y firewalls</li>
+                    <li>Automatización con Bash y PowerShell</li>
+                    <li>Monitoreo y backups de sistemas</li>
+                </ul>
+            </section>
+
+            <footer>
+                Contacto: <a href="mailto:jorch@email.com">jorch@email.com</a> | LinkedIn: <a href="#">linkedin.com/in/jorch22</a>
+            </footer>
+        </div>
+
+        <!-- ===== CONTENIDO EN INGLÉS ===== -->
+        <div id="en" class="hidden">
+            <section id="presentacion-en">
+                <h1>Jorch22</h1>
+                <p>Systems administrator with experience in Windows and Linux environments. 
+                Passionate about IT infrastructure, task automation, and system security. 
+                Seeking to contribute my technical skills and problem-solving ability in a professional setting.</p>
+            </section>
+
+            <section id="experiencia-en">
+                <h2>Professional Experience</h2>
+                <ul>
+                    <li>Junior Systems Administrator at Company X (2019-2022)</li>
+                    <li>Maintenance and update of Linux and Windows servers</li>
+                    <li>User management, permissions, and automated backups</li>
+                </ul>
+            </section>
+
+            <section id="estudios-en">
+                <h2>Education</h2>
+                <ul>
+                    <li>Higher Technician in Systems Administration (2017-2019)</li>
+                    <li>CompTIA Network+ Certification (2020)</li>
+                </ul>
+            </section>
+
+            <section id="idiomas-en">
+                <h2>Languages</h2>
+                <ul>
+                    <li>Spanish: Native</li>
+                    <li>English: Intermediate</li>
+                </ul>
+            </section>
+
+            <section id="aptitudes-en">
+                <h2>Skills & Knowledge</h2>
+                <ul>
+                    <li>Linux and Windows server administration</li>
+                    <li>TCP/IP networking, VPNs and firewalls</li>
+                    <li>Automation with Bash and PowerShell</li>
+                    <li>System monitoring and backups</li>
+                </ul>
+            </section>
+
+            <footer>
+                Contact: <a href="mailto:jorch@email.com">jorch@email.com</a> | LinkedIn: <a href="#">linkedin.com/in/jorch22</a>
+            </footer>
+        </div>
+
     </div>
 
-    <!-- ===== CONTENIDO ESPAÑOL ===== -->
-    <div id="es">
-        <section id="presentacion">
-            <h1>Jorch22</h1>
-            <p>Administrador de sistemas con experiencia en entornos Windows y Linux. 
-            Apasionado por infraestructura TI, automatización y seguridad de sistemas. 
-            Busco aportar mis conocimientos técnicos en un entorno profesional.</p>
-        </section>
+    <!-- ===== JAVASCRIPT PARA CAMBIAR IDIOMA ===== -->
+    <script>
+        function showSpanish() {
+            document.getElementById("es").classList.remove("hidden");
+            document.getElementById("en").classList.add("hidden");
+            setActiveButton("es");
+        }
 
-        <section id="experiencia">
-            <h2>Experiencia Profesional</h2>
-            <ul>
-                <li>Administrador de sistemas junior en Empresa X (2019-2022)</li>
-                <li>Mantenimiento y actualización de servidores Linux y Windows</li>
-                <li>Gestión de usuarios, permisos y backups automatizados</li>
-            </ul>
-        </section>
+        function showEnglish() {
+            document.getElementById("en").classList.remove("hidden");
+            document.getElementById("es").classList.add("hidden");
+            setActiveButton("en");
+        }
 
-        <section id="estudios">
-            <h2>Formación Académica</h2>
-            <ul>
-                <li>Técnico Superior en Administración de Sistemas Informáticos (2017-2019)</li>
-                <li>Certificación CompTIA Network+ (2020)</li>
-            </ul>
-        </section>
+        function setActiveButton(lang) {
+            const btns = document.getElementsByClassName("btn-lang");
+            for (let i = 0; i < btns.length; i++) {
+                btns[i].classList.remove("active");
+            }
+            if(lang === "es") btns[0].classList.add("active");
+            else btns[1].classList.add("active");
+        }
+    </script>
 
-        <section id="idiomas">
-            <h2>Idiomas</h2>
-            <p>Español: Nativo</p>
-            <p>Inglés:</p>
-            <div class="language-bar">
-                <div class="level"></div>
-                <div class="level"></div>
-                <div class="level active"></div>
-                <div class="level active"></div>
-                <div class="level"></div>
-                <div class="level"></div>
-            </div>
-        </section>
-
-        <section id="aptitudes">
-            <h2>Aptitudes y Conocimientos</h2>
-            <ul>
-                <li>Administración de servidores Linux y Windows</li>
-                <li>Redes TCP/IP, VPN y firewalls</li>
-                <li>Automatización con Bash y PowerShell</li>
-                <li>Monitoreo y backups de sistemas</li>
-            </ul>
-        </section>
-
-        <footer>
-            <a href="mailto:jorch@email.com"><i class="fas fa-envelope"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-        </footer>
-    </div>
-
-    <!-- ===== CONTENIDO INGLÉS ===== -->
-    <div id="en" class="hidden">
-        <section id="presentacion-en">
-            <h1>Jorch22</h1>
-            <p>Systems administrator with experience in Windows and Linux environments. 
-            Passionate about IT infrastructure, automation and system security. 
-            Seeking to contribute my technical knowledge in a professional environment.</p>
-        </section>
-
-        <section id="experiencia-en">
-            <h2>Professional Experience</h2>
-            <ul>
-                <li>Junior Systems Administrator at Company X (2019-2022)</li>
-                <li>Maintenance and update of Linux and Windows servers</li>
-                <li>User management, permissions, and automated backups</li>
-            </ul>
-        </section>
-
-        <section id="estudios-en">
-            <h2>Education</h2>
-            <ul>
-                <li>Higher Technician in Systems Administration (2017-2019)</li>
-                <li>CompTIA Network+ Certification (2020)</li>
-            </ul>
-        </section>
-
-        <section id="idiomas-en">
-            <h2>Languages</h2>
-            <p>Spanish: Native</p>
-            <p>English:</p>
-            <div class="language-bar">
-                <div class="level"></div>
-                <div class="level"></div>
-                <div class="level active"></div>
-                <div class="level active"></div>
-                <div class="level"></div>
-                <div class="level"></div>
-            </div>
-        </section>
-
-        <section id="aptitudes-en">
-            <h2>Skills & Knowledge</h2>
-            <ul>
-                <li>Linux and Windows server administration</li>
-                <li>TCP/IP networking, VPNs and firewalls</li>
-                <li>Automation with Bash and PowerShell</li>
-                <li>System monitoring and backups</li>
-            </ul>
-        </section>
-
-        <footer>
-            <a href="mailto:jorch@email.com"><i class="fas fa-envelope"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-        </footer>
-    </div>
-
-</div>
-
-<!-- ===== JAVASCRIPT ===== -->
-<script>
-function showSpanish() {
-    document.getElementById("es").classList.remove("hidden");
-    document.getElementById("en").classList.add("hidden");
-    setActiveButton("es");
-}
-function showEnglish() {
-    document.getElementById("en").classList.remove("hidden");
-    document.getElementById("es").classList.add("hidden");
-    setActiveButton("en");
-}
-function setActiveButton(lang) {
-    const btns = document.getElementsByClassName("btn-lang");
-    for (let i=0;i<btns.length;i++){ btns[i].classList.remove("active"); }
-    if(lang==="es") btns[0].classList.add("active");
-    else btns[1].classList.add("active");
-}
-
-/* ===== FUNCION DE DESCARGA ===== */
-function downloadCV() {
-    const lang = document.getElementById("es").classList.contains("hidden") ? "en" : "es";
-    const elementId = lang === "es" ? "es" : "en";
-    const content = document.getElementById(elementId).innerText;
-
-    const blob = new Blob([content], {type: "text/plain"});
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = lang==="es" ? "CV-Jorch22-ES.txt" : "CV-Jorch22-EN.txt";
-    link.click();
-}
-</script>
 </body>
 </html>
