@@ -7,49 +7,87 @@
 
     <style>
         /* ===== ESTILOS GENERALES ===== */
-
         body {
             font-family: Arial, sans-serif;
-            background-color: #111;
-            color: #f5f5f5;
-            text-align: center;
+            background-color: #f5f5f5;
+            color: #111;
             margin: 0;
-            padding: 40px;
+            padding: 0;
         }
 
-        .card {
-            background-color: #1e1e1e;
-            padding: 30px;
-            border-radius: 10px;
-            max-width: 700px;
+        .container {
+            max-width: 800px;
             margin: auto;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+
+        h1, h2 {
+            color: #0077cc;
         }
 
         h1 {
-            color: #00d4ff;
+            margin-bottom: 5px;
         }
 
+        p, li {
+            line-height: 1.5;
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        /* ===== BOTONES DE IDIOMA ===== */
         .buttons {
+            text-align: right;
             margin-bottom: 20px;
         }
 
         .btn-lang {
-            padding: 8px 15px;
-            margin: 5px;
-            border: none;
+            padding: 6px 12px;
+            margin-left: 5px;
+            border: 1px solid #0077cc;
+            border-radius: 4px;
             cursor: pointer;
-            border-radius: 5px;
+            background-color: white;
+            color: #0077cc;
             font-weight: bold;
         }
 
-        .active {
-            background-color: #00d4ff;
-            color: black;
+        .btn-lang.active {
+            background-color: #0077cc;
+            color: white;
         }
 
+        /* ===== CLASE OCULTA ===== */
         .hidden {
             display: none;
+        }
+
+        /* ===== PIE DE PÁGINA ===== */
+        footer {
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+            margin-top: 30px;
+            border-top: 1px solid #ddd;
+            padding-top: 10px;
+        }
+
+        a {
+            color: #0077cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
         }
 
     </style>
@@ -57,7 +95,7 @@
 
 <body>
 
-    <div class="card">
+    <div class="container">
 
         <!-- ===== BOTONES DE IDIOMA ===== -->
         <div class="buttons">
@@ -67,37 +105,125 @@
 
         <!-- ===== CONTENIDO EN ESPAÑOL ===== -->
         <div id="es">
-            <h1>Jorch22</h1>
-            <p>Desarrollador en formación con interés en tecnología y videojuegos.</p>
-            <p>Actualmente aprendiendo desarrollo web y Unity.</p>
-            <p>Contacto: jorch@email.com</p>
+            <section id="presentacion">
+                <h1>Jorch22</h1>
+                <p>Administrador de sistemas con experiencia en entornos Windows y Linux. 
+                Apasionado por la infraestructura TI, la automatización de tareas y la seguridad de sistemas. 
+                Busco aportar mis conocimientos técnicos y capacidad de resolución de problemas en un entorno profesional.</p>
+            </section>
+
+            <section id="experiencia">
+                <h2>Experiencia Profesional</h2>
+                <ul>
+                    <li>Administrador de sistemas junior en empresa X (2019-2022)</li>
+                    <li>Mantenimiento y actualización de servidores Linux y Windows</li>
+                    <li>Gestión de usuarios, permisos y backups automatizados</li>
+                </ul>
+            </section>
+
+            <section id="estudios">
+                <h2>Formación Académica</h2>
+                <ul>
+                    <li>Técnico Superior en Administración de Sistemas Informáticos (2017-2019)</li>
+                    <li>Certificación CompTIA Network+ (2020)</li>
+                </ul>
+            </section>
+
+            <section id="idiomas">
+                <h2>Idiomas</h2>
+                <ul>
+                    <li>Español: Nativo</li>
+                    <li>Inglés: Intermedio</li>
+                </ul>
+            </section>
+
+            <section id="aptitudes">
+                <h2>Aptitudes y Conocimientos</h2>
+                <ul>
+                    <li>Administración de servidores Linux y Windows</li>
+                    <li>Redes TCP/IP, VPN y firewalls</li>
+                    <li>Automatización con Bash y PowerShell</li>
+                    <li>Monitoreo y backups de sistemas</li>
+                </ul>
+            </section>
+
+            <footer>
+                Contacto: <a href="mailto:jorch@email.com">jorch@email.com</a> | LinkedIn: <a href="#">linkedin.com/in/jorch22</a>
+            </footer>
         </div>
 
         <!-- ===== CONTENIDO EN INGLÉS ===== -->
         <div id="en" class="hidden">
-            <h1>Jorch22</h1>
-            <p>Developer in training with an interest in technology and videogames.</p>
-            <p>Currently learning web development and Unity.</p>
-            <p>Contact: jorch@email.com</p>
+            <section id="presentacion-en">
+                <h1>Jorch22</h1>
+                <p>Systems administrator with experience in Windows and Linux environments. 
+                Passionate about IT infrastructure, task automation, and system security. 
+                Seeking to contribute my technical skills and problem-solving ability in a professional setting.</p>
+            </section>
+
+            <section id="experiencia-en">
+                <h2>Professional Experience</h2>
+                <ul>
+                    <li>Junior Systems Administrator at Company X (2019-2022)</li>
+                    <li>Maintenance and update of Linux and Windows servers</li>
+                    <li>User management, permissions, and automated backups</li>
+                </ul>
+            </section>
+
+            <section id="estudios-en">
+                <h2>Education</h2>
+                <ul>
+                    <li>Higher Technician in Systems Administration (2017-2019)</li>
+                    <li>CompTIA Network+ Certification (2020)</li>
+                </ul>
+            </section>
+
+            <section id="idiomas-en">
+                <h2>Languages</h2>
+                <ul>
+                    <li>Spanish: Native</li>
+                    <li>English: Intermediate</li>
+                </ul>
+            </section>
+
+            <section id="aptitudes-en">
+                <h2>Skills & Knowledge</h2>
+                <ul>
+                    <li>Linux and Windows server administration</li>
+                    <li>TCP/IP networking, VPNs and firewalls</li>
+                    <li>Automation with Bash and PowerShell</li>
+                    <li>System monitoring and backups</li>
+                </ul>
+            </section>
+
+            <footer>
+                Contact: <a href="mailto:jorch@email.com">jorch@email.com</a> | LinkedIn: <a href="#">linkedin.com/in/jorch22</a>
+            </footer>
         </div>
 
     </div>
 
-    <!-- ===== JAVASCRIPT ===== -->
+    <!-- ===== JAVASCRIPT PARA CAMBIAR IDIOMA ===== -->
     <script>
-        /*
-        Piensa en esto como funciones en Python.
-        Vamos a mostrar un bloque y ocultar el otro.
-        */
-
         function showSpanish() {
             document.getElementById("es").classList.remove("hidden");
             document.getElementById("en").classList.add("hidden");
+            setActiveButton("es");
         }
 
         function showEnglish() {
             document.getElementById("en").classList.remove("hidden");
             document.getElementById("es").classList.add("hidden");
+            setActiveButton("en");
+        }
+
+        function setActiveButton(lang) {
+            const btns = document.getElementsByClassName("btn-lang");
+            for (let i = 0; i < btns.length; i++) {
+                btns[i].classList.remove("active");
+            }
+            if(lang === "es") btns[0].classList.add("active");
+            else btns[1].classList.add("active");
         }
     </script>
 
