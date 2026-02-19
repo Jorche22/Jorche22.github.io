@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- Indica al navegador que usamos HTML5 -->
+
+<html lang="es">
+<!-- Elemento raíz del documento. "lang" ayuda a SEO y accesibilidad -->
+
+<head>
+    <!-- Contiene metadatos (no visibles en la página) -->
+
+    <meta charset="UTF-8">
+    <!-- Permite usar caracteres especiales como ñ, tildes, etc -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página se adapte a móviles -->
+
+    <title>Mi Primer CV Web</title>
+    <!-- Título que aparece en la pestaña del navegador -->
+
+    <style>
+        /* Aquí empieza CSS (estilos visuales) */
+
+        body {
+            /* body es todo el contenido visible */
+            font-family: Arial, sans-serif; /* Tipo de letra */
+            background-color: #111; /* Fondo oscuro */
+            color: #f5f5f5; /* Color del texto */
+            text-align: center; /* Centra el texto */
+            margin: 0; /* Quita márgenes por defecto */
+            padding: 40px; /* Espacio interior */
+        }
+
+        .card {
+            /* .card es una clase (como una variable reutilizable) */
+            background-color: #1e1e1e;
+            padding: 30px;
+            border-radius: 10px; /* Bordes redondeados */
+            max-width: 600px; /* Ancho máximo */
+            margin: auto; /* Centra el bloque */
+            box-shadow: 0 0 20px rgba(0,0,0,0.5); /* Sombra */
+        }
+
+        h1 {
+            /* Estilo para el título principal */
+            color: #00d4ff;
+        }
+
+        .btn {
+            /* Clase botón */
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #00d4ff;
+            color: #000;
+            text-decoration: none; /* Quita subrayado */
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            /* :hover es como un evento cuando pasas el mouse */
+            background-color: #00aacc;
+        }
+
+    </style>
+</head>
+
+<body>
+<!-- Aquí empieza lo que el usuario ve -->
+
+    <div class="card">
+        <!-- div = contenedor genérico -->
+        <!-- class="card" conecta este div con el estilo CSS .card -->
+
+        <h1>Tu Nombre Aquí</h1>
+        <!-- h1 = encabezado principal -->
+
+        <p>Desarrollador en formación | Interesado en tecnología y videojuegos</p>
+        <!-- p = párrafo -->
+
+        <p>Este es mi primer currículum web publicado con GitHub Pages 🚀</p>
+
+        <a href="mailto:tucorreo@email.com" class="btn">
+            Contactar
+        </a>
+        <!-- a = enlace -->
+        <!-- href define a dónde va -->
+        <!-- class="btn" aplica estilo botón -->
+
+    </div>
+
+</body>
+</html>
